@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+$primary-bg: #1e2028;
+$secondary-bg: #3a3e4e;
+$text-white: #ffffff;
+$text-white-secondary: #bdbdbd;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  // font-family: 'Lora', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: $primary-bg;
+  // color: $text-white;
+}
+a {
+  // font-family: initial;
+  color: initial;
+  text-decoration: none;
+}
+h1 {
+  font-size: 2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.52rem;
+
+  font-size: 0.89rem;
+}
+.btn-outline {
+  color: $text-white;
+  border: 1px solid $text-white;
+}
+.btn-link {
+  color: $text-white;
+  margin-left: 2rem;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 9.3rem;
+  .brand {
+    justify-content: space-between;
+    .navbar-toggler {
+      display: none;
+    }
+  }
+  .brand-logo {
+    height: 45px;
+  }
+  ul,
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+  li {
+    padding: 1rem 2rem;
+    // margin-left: 2rem;
+  }
+  a {
+    color: $text-white-secondary;
+  }
+  // padding: 4rem auto;
+}
+#hero {
+  text-align: center;
+  padding: 4rem auto;
+  // background-color: $primary-bg;
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    color: $text-white;
+  }
+  p.lead {
+    color: $text-white-secondary;
+    font-size: 1.25rem;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+  margin-bottom: 4rem;
+}
+#templates {
+  margin: 4rem 9.3rem;
+  .template-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    justify-items: center;
+    .template-item {
+      img {
+        height: 250px;
+        width: 100%;
+      }
+      h3 {
+        color: $text-white;
+        font-size: 1.93rem;
+      }
+      p {
+        color: $text-white-secondary;
+        font-size: 1.3rem;
+      }
+      a {
+        margin-top: 0.85rem;
+        // padding-bottom: 0.52rem;
+        // padding-left: 0.52rem;
+        // padding-right: 0.52rem;
+        // padding-bottom: 2rem;
+      }
+    }
+  }
+}
