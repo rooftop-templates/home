@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rooftop Template</title>
-
+    <!-- ffontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,19 +36,25 @@
       </div>
       <div class="navbar-collapse">
         <ul class="navbar-nav" id="navbar-nav">
-          <li class="nav-item"><a href="#" class="nav-item">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-item">Price</a></li>
-          <li class="nav-item"><a href="#" class="nav-item">COntact</a></li>
+          <li class="nav-item">
+            <a href="./index.html" class="nav-item">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./price.html" class="nav-item">Price</a>
+          </li>
+          <li class="nav-item">
+            <a href="./index.html#contact" class="nav-item">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
+
     <section id="hero">
       <div class="container">
         <h1>Rooftop Templates</h1>
         <p class="lead">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
-          labore quos deleniti dolorem velit aspernatur cum alias. Earum eaque
-          doloremque nisi illum explicabo, aliquid eum.
+          build a website that stands out with our free and open-source
+          templates.
         </p>
       </div>
     </section>
@@ -97,5 +111,57 @@
         </div>
       </div>
     </section>
+    <section id="contact">
+      <div class="contact-container">
+        <h2>
+          Have a project in mind? <br />
+          Let's discuss.
+        </h2>
+
+        <div class="email-copy">
+          <p id="email">iamkanhuc@gmail.com</p>
+
+          <button
+            onclick="copyToClipboard('#email')"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Click to copy Email"
+          >
+            <i class="fas fa-clipboard"></i>
+          </button>
+        </div>
+
+        <p class="email-success hidden">email copied!</p>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function copyToClipboard(element) {
+        var $temp = $('<input>');
+        $('body').append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand('copy');
+        $temp.remove();
+        $('.email-success').removeClass('hidden');
+        // $(".email-success").removeClass("hidden");
+        // $(".email-success").classList.add(" hidden").delay(900);
+        // $temp.remove();
+        // function setTimeout(add(" hidden"), 1000);
+        // 👇️ removes element from DOM
+        // hidden.style.display = 'none';
+
+        // 👇️ hides element (still takes up space on page)
+        // box.style.visibility = 'hidden';
+        // }, ;
+      }
+    </script>
+    <script>
+      let navBarCollapse = document.querySelector('.navbar-collapse');
+      let navBarToggler = document.querySelector('.navbar-toggler');
+
+      navBarToggler.addEventListener('click', () => {
+        navBarCollapse.classList.toggle('show');
+      });
+    </script>
   </body>
 </html>

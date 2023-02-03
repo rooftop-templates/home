@@ -5,6 +5,7 @@
 }
 
 html {
+  font-family: "Work Sans", sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -63,10 +64,102 @@ nav li {
   list-style: none;
 }
 nav li {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 nav a {
   color: #bdbdbd;
+}
+
+@media screen and (max-width: 560px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
+  }
+  nav .brand {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .brand .navbar-toggler {
+    display: block;
+  }
+  nav .navbar-collapse {
+    display: none;
+  }
+  nav .navbar-collapse.show {
+    display: block;
+  }
+  nav ul {
+    display: block;
+  }
+  nav li {
+    display: block;
+  }
+  section {
+    margin: 0 16px;
+  }
+}
+#contact {
+  margin-bottom: 3rem;
+}
+#contact .contact-container {
+  text-align: center;
+  margin-top: 150px;
+}
+#contact .contact-container h2 {
+  color: #f5f5f5;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 48px;
+}
+#contact .contact-container .email-copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  /* padding: 25px; */
+}
+#contact .contact-container .email-copy p#email {
+  color: #f5f5f5;
+  font-weight: 400 !important;
+  margin-bottom: 0;
+  padding: 15px 35px;
+  background-color: rgba(13, 109, 253, 0.1294117647);
+  background-color: #3c4043;
+  border: 1px solid #0d6dfd;
+  border-radius: 5px 0 0 5px;
+  letter-spacing: 0.25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#contact .contact-container .email-copy button {
+  padding: 10px 25px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #0d6dfd;
+  color: #ffffff;
+}
+#contact .contact-container p.hidden {
+  display: none;
+  -webkit-animation: hideAnimation 0s ease-in 5s;
+          animation: hideAnimation 0s ease-in 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#contact p.email-success {
+  font-weight: 600;
+  color: green;
+  padding: 5px;
+  width: 125px;
+  margin: 15px auto;
+  transition-timing-function: ease-in;
+  transition-duration: 800ms;
 }
 
 #hero {
@@ -112,4 +205,25 @@ nav a {
 }
 #templates .template-container .template-item a {
   margin-top: 0.85rem;
+}
+
+#pricing {
+  padding: 4rem auto;
+}
+#pricing h1 {
+  font-size: 1.54rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+#pricing p {
+  color: #bdbdbd;
+  font-size: 1rem;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+#pricing .bmc-btn-container {
+  text-align: center;
+  font-size: 15px;
 }/*# sourceMappingURL=style.css.map */
