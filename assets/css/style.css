@@ -33,6 +33,11 @@ h1 {
   font-size: 0.89rem;
 }
 
+.btn-primary {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 .btn-outline {
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -147,10 +152,8 @@ nav a {
 }
 #contact .contact-container p.hidden {
   display: none;
-  -webkit-animation: hideAnimation 0s ease-in 5s;
-          animation: hideAnimation 0s ease-in 5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: hideAnimation 0s ease-in 5s;
+  animation-fill-mode: forwards;
 }
 #contact p.email-success {
   font-weight: 600;

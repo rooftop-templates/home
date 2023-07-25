@@ -36,6 +36,10 @@ h1 {
 
   font-size: 0.89rem;
 }
+.btn-primary {
+  color: $text-white;
+  border: 1px solid $text-white;
+}
 .btn-outline {
   color: $text-white;
   border: 1px solid $text-white;
